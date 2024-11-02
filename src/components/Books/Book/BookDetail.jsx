@@ -1,6 +1,9 @@
 import { useLoaderData, useParams } from "react-router-dom";
-import { addToStoredReadList } from "../../Utility/addToDb";
-import { addToStoredReadList2 } from "../../Utility/addToDb2";
+import {
+  addToStoredReadList,
+  addToStoredWishList,
+} from "../../Utility/addToDb";
+
 const BookDetail = () => {
   const { bookId } = useParams();
 
@@ -26,8 +29,8 @@ const BookDetail = () => {
     addToStoredReadList(id);
   };
 
-  const handleAddToWishList = (id2) => {
-    addToStoredReadList2(id2);
+  const handleAddToWishList = (id) => {
+    addToStoredWishList(id);
   };
 
   return (

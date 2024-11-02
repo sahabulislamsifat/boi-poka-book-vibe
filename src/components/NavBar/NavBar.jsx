@@ -1,16 +1,18 @@
+import { NavLink } from "react-router-dom";
 import bookIcon from "../../assets/book.ico";
 const NavBar = () => {
   const links = (
     <>
       <li>
-        {" "}
-        <a className="text-green-600 border-green-600 border">Home</a>
+        <NavLink to="/" className="text-green-600 border-green-600 border">
+          Home
+        </NavLink>
       </li>
       <li>
-        <a>Listed Books</a>
+        <NavLink to="listedBooks">Listed Books</NavLink>
       </li>
       <li>
-        <a>Pages to Read</a>
+        <NavLink>Pages to Read</NavLink>
       </li>
     </>
   );
