@@ -1,3 +1,4 @@
+import bookIcon from "../../assets/book.ico";
 const NavBar = () => {
   const links = (
     <>
@@ -41,7 +42,10 @@ const NavBar = () => {
             {links}
           </ul>
         </div>
-        <a className="btn btn-ghost text-xl font-bold">Boi Poka</a>
+        <div className="flex">
+          <img src={bookIcon} alt="" />
+          <a className="btn btn-ghost text-xl font-bold">Boi Poka</a>
+        </div>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1 font-semibold">{links}</ul>
