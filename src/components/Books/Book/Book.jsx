@@ -1,11 +1,20 @@
 import { Link } from "react-router-dom";
 
 const Book = ({ book }) => {
-  const { bookId, image, bookName, author, tags, category } = book;
+  const {
+    bookId,
+    image,
+    bookName,
+    author,
+    tags,
+    category,
+    rating,
+    totalPages,
+  } = book;
 
   return (
     <Link to={`books/${bookId}`}>
-      <div className="card border-slate-400 bg-base-100 w-96 shadow-xl p-6">
+      <div className="card mx-auto border-slate-400 bg-base-100 w-96 shadow-xl p-6">
         <figure className="py-8 bg-blue-200 rounded-2xl">
           <img src={image} className="h-[166px]" alt={bookName} />
         </figure>
@@ -29,6 +38,8 @@ const Book = ({ book }) => {
           <div className="divider"></div>
           <div className="card-actions justify-between">
             <div className="badge badge-outline">{category}</div>
+            <div>{rating}</div>
+            <div>{totalPages}</div>
             <div className="badge">
               <div className="rating">
                 <input
